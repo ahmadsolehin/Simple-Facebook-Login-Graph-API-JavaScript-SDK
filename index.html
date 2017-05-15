@@ -11,6 +11,7 @@
 
 
 	<script>
+
 		window.fbAsyncInit = function() {
 			FB.init({
 				appId      : '775513625960182',
@@ -36,29 +37,30 @@
 		function statusChangeCallback(response){
 			if (response.status === 'connected') {
 				console.log('yeah');
-				    setElements(true);
+				setElements(true);
 
 			}else{
 				console.log('oh man');
-				    setElements(false);
+				setElements(false);
 
 			}
 		}
 
 
-function checkLoginState() {
-  FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
-  });
-}
+		function checkLoginState() {
+			FB.getLoginStatus(function(response) {
+				statusChangeCallback(response);
+			});
+		}
 
-function setElements(isLoggedIn){
-	if (isLoggedIn) {
-		window.location = "home.html";
-	}else{
+		function setElements(isLoggedIn){
+			if (isLoggedIn) {
+				window.location = "home.html";
+			}else{
 
-	}
-}
+			}
+		}
+
 	</script>
 
 

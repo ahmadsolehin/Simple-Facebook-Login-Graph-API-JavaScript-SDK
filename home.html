@@ -1,3 +1,45 @@
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<body>
+
+
+  <script>
+
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '775513625960182',
+        cookie     : true,
+        xfbml      : true,
+        version    : 'v2.8'
+      });
+
+      FB.getLoginStatus(function(response) {
+        statusChangeCallback(response);
+      });
+
+    };
+
+    (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+
+    function logout(){
+      FB.logout(function(response){
+        setElements(false);
+                window.location = "index.html";
+
+      })
+    }
+  </script>
+
 <link rel="stylesheet" type="text/css" href="https://bootswatch.com/slate/bootstrap.min.css">
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -20,6 +62,7 @@
 
            <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="#">Ayam</a></li>
+            <li class=""><a onclick="logout()" href="#">Logout</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
