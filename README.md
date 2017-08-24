@@ -1,5 +1,6 @@
 # Simple-Facebook-Login-Graph-API-JavaScript-SDK
-In this freestyle coding video I will implement Facebook login using the JavaScript SDK and we will take a look at the Graph API. We will also be working with the Graph API explorer and taking a look at the different permissions that we can request with the access token
+
+implement Facebook login using the JavaScript SDK and we will take a look at the Graph API. We will also be working with the Graph API explorer and taking a look at the different permissions that we can request with the access token
 
 # Simple-step
 
