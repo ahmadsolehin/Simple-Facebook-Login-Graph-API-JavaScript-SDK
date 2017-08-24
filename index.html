@@ -77,6 +77,20 @@
         `;
         document.getElementById('profile').innerHTML = profile;
       }
+	    
+	         function buildFeed(feed){
+        let output = '<h3>Latest Posts</h3>';
+        for(let i in feed.data){
+          if(feed.data[i].message){
+            output += `
+              <div class="well">
+                ${feed.data[i].message} <span>${feed.data[i].created_time}</span>
+              </div>
+            `;
+          }
+        }
+        document.getElementById('feed').innerHTML = output;
+      }
 
 
 	</script>
