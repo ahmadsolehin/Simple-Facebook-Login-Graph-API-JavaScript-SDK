@@ -2,7 +2,7 @@
 
 <li>implement Facebook login using the JavaScript SDK </li>
 <li>working with the Graph API explorer</li>
-different permissions that we can request with the access token
+<li>different permissions that we can request with the access token</li>
 
 # Simple-step
 
