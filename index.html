@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -9,9 +10,7 @@
       #profile, #logout, #feed{display:none}
     </style>
   </head>
-
   <body>
-	  
     <script>
       window.fbAsyncInit = function() {
         FB.init({
@@ -24,9 +23,6 @@
             statusChangeCallback(response);
         });
       };
-	    
-
-	    
       (function(d, s, id){
          var js, fjs = d.getElementsByTagName(s)[0];
          if (d.getElementById(id)) {return;}
@@ -34,7 +30,6 @@
          js.src = "//connect.facebook.net/en_US/sdk.js";
          fjs.parentNode.insertBefore(js, fjs);
        }(document, 'script', 'facebook-jssdk'));
-	    
        function statusChangeCallback(response){
          if(response.status === 'connected'){
            console.log('Logged in and authenticated');
@@ -45,9 +40,7 @@
            setElements(false);
          }
        }
-
-
-	        function checkLoginState() {
+      function checkLoginState() {
         FB.getLoginStatus(function(response) {
           statusChangeCallback(response);
         });
@@ -77,8 +70,7 @@
         `;
         document.getElementById('profile').innerHTML = profile;
       }
-	    
-	         function buildFeed(feed){
+      function buildFeed(feed){
         let output = '<h3>Latest Posts</h3>';
         for(let i in feed.data){
           if(feed.data[i].message){
@@ -91,9 +83,7 @@
         }
         document.getElementById('feed').innerHTML = output;
       }
-
-
-     function setElements(isLoggedIn){
+      function setElements(isLoggedIn){
         if(isLoggedIn){
           document.getElementById('logout').style.display = 'block';
           document.getElementById('profile').style.display = 'block';
@@ -114,7 +104,6 @@
         });
       }
     </script>
-
 
     <nav class="navbar navbar-default">
       <div class="container">
@@ -142,7 +131,8 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
- <div class="container">
+
+    <div class="container">
       <h3 id="heading">Log in to view your profile</h3>
       <div id="profile"></div>
       <div id="feed"></div>
