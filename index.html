@@ -9,25 +9,25 @@
       #profile, #logout, #feed{display:none}
     </style>
   </head>
-	
-<body>
 
+  <body>
+	  
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : 'YOURAPPID',
+          cookie     : true,
+          xfbml      : true,
+          version    : 'v2.8'
+        });
+        FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+        });
+      };
+	    
 
 	<script>
 
-		window.fbAsyncInit = function() {
-			FB.init({
-				appId      : '775513625960182',
-				cookie     : true,
-				xfbml      : true,
-				version    : 'v2.8'
-			});
-
-			FB.getLoginStatus(function(response) {
-				statusChangeCallback(response);
-			});
-
-		};
 
 		(function(d, s, id){
 			var js, fjs = d.getElementsByTagName(s)[0];
